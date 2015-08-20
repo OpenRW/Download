@@ -523,7 +523,7 @@ namespace OpenRW_SRC
         {
             if(CheckForInternetConnection())
             {
-                string url = @"https://raw.githubusercontent.com/OpenRW/binaries/master/Update.ini";
+                string url = @"https://raw.githubusercontent.com/OpenRW/Download/master/Update.ini";
             // Create an instance of WebClient
             WebClient client = new WebClient();
             // Hookup DownloadFileCompleted Event
