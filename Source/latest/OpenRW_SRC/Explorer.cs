@@ -575,7 +575,7 @@ namespace OpenRW_SRC
 
                         client.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFile2Completed);
 
-                        client.DownloadFileAsync(new Uri(url), "Update.exe");
+                        client.DownloadFileAsync(new Uri(url), "Update.msi");
                     }
 
                 }
@@ -593,7 +593,7 @@ namespace OpenRW_SRC
         //Perform update
             void client_DownloadFile2Completed(object sender, AsyncCompletedEventArgs e)
         {
-            Process.Start("Update.exe");
+            Process.Start("Update.msi");
             Application.Exit();
         }
 

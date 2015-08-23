@@ -22,3 +22,14 @@ B:\VS\OpenRW_SRC\OpenRW_SRC\bin\Release\OpenRW.pdb
 B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW.exe
 B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW.pdb
 B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW.Properties.Resources.resources
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\bin\Release\OpenRW.exe.config
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW.exe
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW.pdb
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW_SRC.csprojResolveAssemblyReference.cache
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW_SRC.About.resources
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW_SRC.Explorer.resources
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW_SRC.IMGvc.resources
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW_SRC.Path.resources
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW.Properties.Resources.resources
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW_SRC.Selector.resources
+C:\Users\redit\Documents\GitHub\Download\Source\history\1.00-b0001\OpenRW_SRC\obj\Release\OpenRW_SRC.csproj.GenerateResource.Cache
