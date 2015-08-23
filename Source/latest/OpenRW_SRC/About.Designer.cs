@@ -96,7 +96,7 @@ namespace OpenRW_SRC
             this.buildLabel.Name = "buildLabel";
             this.buildLabel.Size = new System.Drawing.Size(31, 13);
             this.buildLabel.TabIndex = 4;
-            this.buildLabel.Text = "0001";
+            this.buildLabel.Text = "0002";
             // 
             // versionLabel
             // 
@@ -123,7 +123,7 @@ namespace OpenRW_SRC
             this.compileDate.Name = "compileDate";
             this.compileDate.Size = new System.Drawing.Size(61, 13);
             this.compileDate.TabIndex = 7;
-            this.compileDate.Text = "19.08.2015";
+            this.compileDate.Text = "23.08.2015";
             // 
             // label5
             // 

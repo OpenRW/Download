@@ -8,6 +8,12 @@
     explorer.
     Parts of the following code are taken 
     from MSDN.
+
+    News: Fixed a bug and made the project
+    VS 2015 compatible.
+    Updater works fine with the new GitHub
+    repository
+    To-Do: Clean up code
      
 */
 
@@ -32,9 +38,7 @@ namespace OpenRW_SRC
     public partial class Explorer : Form
     {
 
-        //Gonna write a book. Definetly got some writing skills :D
-
-        int version = 100; //updating stuff
+        int version = 1000002; //version = 1.00 build = 0002
         int intGame = 0; //You should know this one
 
         bool isWorking = false; //Is the Background Worker currently working? No, it isn't! Aaah whatever...
@@ -126,6 +130,8 @@ namespace OpenRW_SRC
         {
             isWorking = true;
 
+            
+
             Invoke((MethodInvoker)(() => listView1.Clear()));
 
 
@@ -174,7 +180,7 @@ namespace OpenRW_SRC
                     //
                 }
 
-
+                
 
             }
 
@@ -208,7 +214,7 @@ namespace OpenRW_SRC
                     //Application exits well while loading
                 }
             }
-            isWorking = false;
+            
             
         }
 
@@ -399,7 +405,12 @@ namespace OpenRW_SRC
                         {
                             EmptyDirectory();
                         }
-                    }
+                    //Disable some UI things
+                    openToolStripMenuItem1.Enabled = false;
+                    showInWindowsExplorerToolStripMenuItem2.Enabled = false;
+                    copyPathToolStripMenuItem2.Enabled = false;
+                    isWorking = false;
+                }
 
                 }
 
@@ -452,6 +463,11 @@ namespace OpenRW_SRC
                         {
                             EmptyDirectory();
                         }
+                        //Disable some UI things
+                        openToolStripMenuItem1.Enabled = false;
+                        showInWindowsExplorerToolStripMenuItem2.Enabled = false;
+                        copyPathToolStripMenuItem2.Enabled = false;
+                        isWorking = false;
                     }
 
                 }
@@ -630,7 +646,12 @@ namespace OpenRW_SRC
                         {
                             EmptyDirectory();
                         }
-                    }
+                    //Disable some UI things
+                    openToolStripMenuItem1.Enabled = false;
+                    showInWindowsExplorerToolStripMenuItem2.Enabled = false;
+                    copyPathToolStripMenuItem2.Enabled = false;
+                    isWorking = false;
+                }
 
                 }
 
