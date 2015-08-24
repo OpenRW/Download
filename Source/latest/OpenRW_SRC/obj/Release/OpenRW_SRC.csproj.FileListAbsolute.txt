@@ -35,3 +35,16 @@ C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\bin\Release\Op
 C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.exe
 C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.pdb
 C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.csprojResolveAssemblyReference.cache
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\bin\Release\OpenRW.exe.config
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.exe
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.pdb
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\bin\Release\OpenRW.exe
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\bin\Release\OpenRW.pdb
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.csprojResolveAssemblyReference.cache
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.About.resources
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.Explorer.resources
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.IMGvc.resources
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.Path.resources
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.Properties.Resources.resources
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.Selector.resources
+C:\Users\Felix\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.csproj.GenerateResource.Cache

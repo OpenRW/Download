@@ -378,33 +378,31 @@ namespace OpenRW_SRC
         {
             //coming soon
         }
-
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openFolder()
         {
-            
-                if (listView1.SelectedItems[0].ImageKey == "???" || listView1.SelectedItems[0].ImageKey == "????")
-                {
-                    currHier = currHier + listView1.SelectedItems[0].Text + @"\";
+            if (listView1.SelectedItems[0].ImageKey == "???" || listView1.SelectedItems[0].ImageKey == "????")
+            {
+                currHier = currHier + listView1.SelectedItems[0].Text + @"\";
 
-                    string filesystempath = gamefolder + @"\" + currHier;
-                    if (Directory.Exists(filesystempath))
+                string filesystempath = gamefolder + @"\" + currHier;
+                if (Directory.Exists(filesystempath))
+                {
+
+
+                    if (Directory.EnumerateFileSystemEntries(filesystempath, "*", SearchOption.AllDirectories).Count() > 0)
                     {
 
+                        ContentDirectory();
 
-                        if (Directory.EnumerateFileSystemEntries(filesystempath, "*", SearchOption.AllDirectories).Count() > 0)
-                        {
-
-                            ContentDirectory();
-
-                            DirectoryInfo root = new DirectoryInfo(filesystempath);
-                            fileEntries = root.GetFiles();
-                            folderEntries = root.GetDirectories();
-                            backgroundWorker1.RunWorkerAsync();
-                        }
-                        else
-                        {
-                            EmptyDirectory();
-                        }
+                        DirectoryInfo root = new DirectoryInfo(filesystempath);
+                        fileEntries = root.GetFiles();
+                        folderEntries = root.GetDirectories();
+                        backgroundWorker1.RunWorkerAsync();
+                    }
+                    else
+                    {
+                        EmptyDirectory();
+                    }
                     //Disable some UI things
                     openToolStripMenuItem1.Enabled = false;
                     showInWindowsExplorerToolStripMenuItem2.Enabled = false;
@@ -412,26 +410,31 @@ namespace OpenRW_SRC
                     isWorking = false;
                 }
 
-                }
+            }
 
-                else if ((listView1.SelectedItems[0].ImageKey == ".dir" || listView1.SelectedItems[0].ImageKey == ".img") && (intGame == 0 || intGame == 1))
+            else if ((listView1.SelectedItems[0].ImageKey == ".dir" || listView1.SelectedItems[0].ImageKey == ".img") && (intGame == 0 || intGame == 1))
+            {
+                if (listView1.SelectedItems[0].ImageKey == ".dir")
                 {
-                    if (listView1.SelectedItems[0].ImageKey == ".dir")
-                    {
-                        IMGvc imgVCform = new IMGvc(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString(), false);
-                        imgVCform.Show();
-                    }
-                    else
-                    {
-                        IMGvc imgVCform = new IMGvc(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString(), true);
-                        imgVCform.Show();
-                    }
-
+                    IMGvc imgVCform = new IMGvc(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString(), false);
+                    imgVCform.Show();
                 }
                 else
                 {
-                    Process.Start(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString());
+                    IMGvc imgVCform = new IMGvc(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString(), true);
+                    imgVCform.Show();
                 }
+
+            }
+            else
+            {
+                Process.Start(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString());
+            }
+        }
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            openFolder();
             
         }
 
@@ -439,57 +442,7 @@ namespace OpenRW_SRC
         {
             if (e.Button == MouseButtons.Left)
             {
-                //MessageBox.Show(listView1.SelectedItems[0].Text);
-                if(listView1.SelectedItems[0].ImageKey=="???" || listView1.SelectedItems[0].ImageKey=="????")
-                {
-                    currHier = currHier + listView1.SelectedItems[0].Text + @"\";
-
-                    string filesystempath = gamefolder + @"\" + currHier;
-                    if (Directory.Exists(filesystempath))
-                    {
-
-
-                        if (Directory.EnumerateFileSystemEntries(filesystempath, "*", SearchOption.AllDirectories).Count() > 0)
-                        {
-
-                            ContentDirectory();
-
-                            DirectoryInfo root = new DirectoryInfo(filesystempath);
-                            fileEntries = root.GetFiles();
-                            folderEntries = root.GetDirectories();
-                            backgroundWorker1.RunWorkerAsync();
-                        }
-                        else
-                        {
-                            EmptyDirectory();
-                        }
-                        //Disable some UI things
-                        openToolStripMenuItem1.Enabled = false;
-                        showInWindowsExplorerToolStripMenuItem2.Enabled = false;
-                        copyPathToolStripMenuItem2.Enabled = false;
-                        isWorking = false;
-                    }
-
-                }
-
-                else if ((listView1.SelectedItems[0].ImageKey == ".dir" || listView1.SelectedItems[0].ImageKey == ".img") && (intGame == 0 || intGame == 1))
-                {
-                    if(listView1.SelectedItems[0].ImageKey == ".dir")
-                    {
-                    IMGvc imgVCform = new IMGvc(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString(), false);
-                    imgVCform.Show();                    
-                    }
-                    else
-                    {
-                        IMGvc imgVCform = new IMGvc(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString(), true);
-                        imgVCform.Show();
-                    }
-                    
-                }
-                else
-                {
-                    Process.Start(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString());
-                }
+                openFolder();
             }
         }
 
@@ -623,56 +576,7 @@ namespace OpenRW_SRC
 
             private void openToolStripMenuItem1_Click(object sender, EventArgs e)
             {
-                if (listView1.SelectedItems[0].ImageKey == "???" || listView1.SelectedItems[0].ImageKey == "????")
-                {
-                    currHier = currHier + listView1.SelectedItems[0].Text + @"\";
-
-                    string filesystempath = gamefolder + @"\" + currHier;
-                    if (Directory.Exists(filesystempath))
-                    {
-
-
-                        if (Directory.EnumerateFileSystemEntries(filesystempath, "*", SearchOption.AllDirectories).Count() > 0)
-                        {
-
-                            ContentDirectory();
-
-                            DirectoryInfo root = new DirectoryInfo(filesystempath);
-                            fileEntries = root.GetFiles();
-                            folderEntries = root.GetDirectories();
-                            backgroundWorker1.RunWorkerAsync();
-                        }
-                        else
-                        {
-                            EmptyDirectory();
-                        }
-                    //Disable some UI things
-                    openToolStripMenuItem1.Enabled = false;
-                    showInWindowsExplorerToolStripMenuItem2.Enabled = false;
-                    copyPathToolStripMenuItem2.Enabled = false;
-                    isWorking = false;
-                }
-
-                }
-
-                else if ((listView1.SelectedItems[0].ImageKey == ".dir" || listView1.SelectedItems[0].ImageKey == ".img") && (intGame == 0 || intGame == 1))
-                {
-                    if (listView1.SelectedItems[0].ImageKey == ".dir")
-                    {
-                        IMGvc imgVCform = new IMGvc(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString(), false);
-                        imgVCform.Show();
-                    }
-                    else
-                    {
-                        IMGvc imgVCform = new IMGvc(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString(), true);
-                        imgVCform.Show();
-                    }
-
-                }
-                else
-                {
-                    Process.Start(gamefolder + @"\" + currHier + @"\" + listView1.SelectedItems[0].Text.ToString());
-                }
+                openFolder();
             }
 
             private void showInWindowsExplorerToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -686,6 +590,16 @@ namespace OpenRW_SRC
             private void copyPathToolStripMenuItem2_Click(object sender, EventArgs e)
             {
                 Clipboard.SetText(gamefolder + @"\" + currHier + listView1.SelectedItems[0].Text);
+            }
+
+            private void neuToolStripButton_Click(object sender, EventArgs e)
+            {
+                string path = currHier;
+                int pos = path.LastIndexOf(@"\") + 1;
+                 // prints "world"
+                MessageBox.Show(path.Substring(pos, path.Length - pos));
+                string filesystempath = gamefolder + @"\" + currHier;
+
             }
     }
 

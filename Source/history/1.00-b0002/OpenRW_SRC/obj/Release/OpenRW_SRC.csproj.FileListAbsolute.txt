@@ -1,0 +1,37 @@
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\bin\Release\OpenRW_SRC.exe.config
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\bin\Release\OpenRW_SRC.exe
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\bin\Release\OpenRW_SRC.pdb
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.csprojResolveAssemblyReference.cache
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.Explorer.resources
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.Path.resources
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.Properties.Resources.resources
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.Selector.resources
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.csproj.GenerateResource.Cache
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.exe
+C:\Users\Felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.pdb
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.Explorer.resources
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.Path.resources
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.Selector.resources
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.csproj.GenerateResource.Cache
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.About.resources
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.IMGvc.resources
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW_SRC.csprojResolveAssemblyReference.cache
+B:\VS\OpenRW_SRC\OpenRW_SRC\bin\Release\OpenRW.exe.config
+B:\VS\OpenRW_SRC\OpenRW_SRC\bin\Release\OpenRW.exe
+B:\VS\OpenRW_SRC\OpenRW_SRC\bin\Release\OpenRW.pdb
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW.exe
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW.pdb
+B:\VS\OpenRW_SRC\OpenRW_SRC\obj\Release\OpenRW.Properties.Resources.resources
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.About.resources
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.Explorer.resources
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.IMGvc.resources
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.Path.resources
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.Properties.Resources.resources
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.Selector.resources
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.csproj.GenerateResource.Cache
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\bin\Release\OpenRW.exe.config
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\bin\Release\OpenRW.exe
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\bin\Release\OpenRW.pdb
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.exe
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW.pdb
+C:\Users\redit\Documents\GitHub\Download\Source\latest\OpenRW_SRC\obj\Release\OpenRW_SRC.csprojResolveAssemblyReference.cache

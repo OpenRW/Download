@@ -435,12 +435,12 @@ namespace OpenRW_SRC
             // neuToolStripButton
             // 
             this.neuToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.neuToolStripButton.Enabled = false;
             this.neuToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("neuToolStripButton.Image")));
             this.neuToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.neuToolStripButton.Name = "neuToolStripButton";
             this.neuToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.neuToolStripButton.Text = "Back";
+            this.neuToolStripButton.Click += new System.EventHandler(this.neuToolStripButton_Click);
             // 
             // Explorer
             // 

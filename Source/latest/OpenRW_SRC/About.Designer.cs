@@ -96,7 +96,7 @@ namespace OpenRW_SRC
             this.buildLabel.Name = "buildLabel";
             this.buildLabel.Size = new System.Drawing.Size(31, 13);
             this.buildLabel.TabIndex = 4;
-            this.buildLabel.Text = "0002";
+            this.buildLabel.Text = "0003";
             // 
             // versionLabel
             // 
@@ -123,7 +123,7 @@ namespace OpenRW_SRC
             this.compileDate.Name = "compileDate";
             this.compileDate.Size = new System.Drawing.Size(61, 13);
             this.compileDate.TabIndex = 7;
-            this.compileDate.Text = "23.08.2015";
+            this.compileDate.Text = "24.08.2015";
             // 
             // label5
             // 
@@ -146,6 +146,7 @@ namespace OpenRW_SRC
             this.textBox1.TabIndex = 9;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.SelectionStart = 0;
             // 
             // label6
             // 

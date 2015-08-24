@@ -1,0 +1,9 @@
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\bin\Debug\OpenRW_SRC.exe.config
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\bin\Debug\OpenRW_SRC.exe
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\bin\Debug\OpenRW_SRC.pdb
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Debug\OpenRW_SRC.Form1.resources
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Debug\OpenRW_SRC.Properties.Resources.resources
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Debug\OpenRW_SRC.csproj.GenerateResource.Cache
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Debug\OpenRW_SRC.exe
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Debug\OpenRW_SRC.pdb
+c:\users\felix\documents\visual studio 2013\Projects\OpenRW_SRC\OpenRW_SRC\obj\Debug\OpenRW_SRC.csprojResolveAssemblyReference.cache
