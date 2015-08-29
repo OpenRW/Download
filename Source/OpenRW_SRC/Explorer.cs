@@ -26,6 +26,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Net;
+using System.Threading;
 
 namespace OpenRW_SRC
 {
@@ -33,7 +34,7 @@ namespace OpenRW_SRC
     public partial class Explorer : Form
     {
         ComponentResourceManager resources = new ComponentResourceManager(typeof(Explorer));
-        int version = 1000004; //version = 1.00 build = 0003
+        int version = 1000005; //version = 1.00 build = 0005
         int intGame = 0; //You should know this one
 
         bool isWorking = false; //Is the Background Worker currently working? No, it isn't! Aaah whatever...
@@ -133,6 +134,7 @@ namespace OpenRW_SRC
         //adds new items and images to the listView
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+            Thread.Sleep(50);
             isWorking = true;
             Invoke((MethodInvoker)(() => backToolStripButton.Enabled = false));
 

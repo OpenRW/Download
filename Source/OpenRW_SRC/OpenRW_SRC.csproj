@@ -107,37 +107,64 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.cs.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="About.de.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="About.en.resx">
+    <EmbeddedResource Include="About.pt-PT.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="About.ru.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.cs.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Explorer.de.resx">
       <DependentUpon>Explorer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Explorer.en.resx">
+    <EmbeddedResource Include="Explorer.pt-PT.resx">
       <DependentUpon>Explorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.resx">
       <DependentUpon>Explorer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.ru.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMGvc.cs.resx">
+      <DependentUpon>IMGvc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IMGvc.de.resx">
       <DependentUpon>IMGvc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IMGvc.en.resx">
+    <EmbeddedResource Include="IMGvc.pt-PT.resx">
       <DependentUpon>IMGvc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IMGvc.resx">
       <DependentUpon>IMGvc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IMGvc.ru.resx">
+      <DependentUpon>IMGvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Path.cs.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Path.de.resx">
       <DependentUpon>Path.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Path.pt-PT.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Path.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Path.ru.resx">
       <DependentUpon>Path.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -150,18 +177,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\internal.cs.resx" />
     <EmbeddedResource Include="Resources\internal.de.resx" />
+    <EmbeddedResource Include="Resources\internal.pt-PT.resx" />
     <EmbeddedResource Include="Resources\internal.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>internal.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\internal.ru.resx" />
+    <EmbeddedResource Include="Selector.cs.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Selector.de.resx">
       <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Selector.en.resx">
+    <EmbeddedResource Include="Selector.pt-PT.resx">
       <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Selector.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selector.ru.resx">
       <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest">

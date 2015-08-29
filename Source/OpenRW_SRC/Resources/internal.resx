@@ -169,7 +169,7 @@
     <value>This IMG type is not supported yet.</value>
   </data>
   <data name="pls1ST" xml:space="preserve">
-    <value>Please select your</value>
+    <value>Please select your </value>
   </data>
   <data name="plsLST" xml:space="preserve">
     <value> directory!</value>

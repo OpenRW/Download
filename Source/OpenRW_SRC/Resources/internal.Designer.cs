@@ -214,7 +214,7 @@ namespace OpenRW.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Please select your ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please select your  ähnelt.
         /// </summary>
         internal static string pls1ST {
             get {

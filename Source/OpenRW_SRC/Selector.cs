@@ -12,6 +12,8 @@
 using OpenRW;
 using System;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
 
 namespace OpenRW_SRC
 {
@@ -19,8 +21,11 @@ namespace OpenRW_SRC
     {
         public Selector()
         {
+            //Thread.CurrentThread.CurrentCulture = new CultureInfo("cs");
             
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("cs");
             InitializeComponent();
+            
         }
 
         //Some buttons

@@ -72,22 +72,22 @@ namespace OpenRW_SRC
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::OpenRW.Properties.Resources.SA;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Image = global::OpenRW.Properties.Resources.SA;
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::OpenRW.Properties.Resources.VC;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::OpenRW.Properties.Resources.VC;
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::OpenRW.Properties.Resources.III;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::OpenRW.Properties.Resources.III;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
