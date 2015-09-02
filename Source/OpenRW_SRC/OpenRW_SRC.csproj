@@ -107,10 +107,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.be.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="About.cs.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="About.de.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.fa-IR.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.fr.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.hu.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="About.pt-PT.resx">
@@ -122,10 +140,28 @@
     <EmbeddedResource Include="About.ru.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="About.uk.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.zh-Hans.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.be.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Explorer.cs.resx">
       <DependentUpon>Explorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.de.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.fa-IR.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.fr.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.hu.resx">
       <DependentUpon>Explorer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Explorer.pt-PT.resx">
@@ -137,10 +173,28 @@
     <EmbeddedResource Include="Explorer.ru.resx">
       <DependentUpon>Explorer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.uk.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Explorer.zh-Hans.resx">
+      <DependentUpon>Explorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMGvc.be.resx">
+      <DependentUpon>IMGvc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IMGvc.cs.resx">
       <DependentUpon>IMGvc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IMGvc.de.resx">
+      <DependentUpon>IMGvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMGvc.fa-IR.resx">
+      <DependentUpon>IMGvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMGvc.fr.resx">
+      <DependentUpon>IMGvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMGvc.hu.resx">
       <DependentUpon>IMGvc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IMGvc.pt-PT.resx">
@@ -152,10 +206,28 @@
     <EmbeddedResource Include="IMGvc.ru.resx">
       <DependentUpon>IMGvc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IMGvc.uk.resx">
+      <DependentUpon>IMGvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMGvc.zh-Hans.resx">
+      <DependentUpon>IMGvc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Path.be.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Path.cs.resx">
       <DependentUpon>Path.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Path.de.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Path.fa-IR.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Path.fr.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Path.hu.resx">
       <DependentUpon>Path.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Path.pt-PT.resx">
@@ -165,6 +237,12 @@
       <DependentUpon>Path.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Path.ru.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Path.uk.resx">
+      <DependentUpon>Path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Path.zh-Hans.resx">
       <DependentUpon>Path.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -177,18 +255,36 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\internal.be.resx" />
     <EmbeddedResource Include="Resources\internal.cs.resx" />
     <EmbeddedResource Include="Resources\internal.de.resx" />
+    <EmbeddedResource Include="Resources\internal.fa-IR.resx" />
+    <EmbeddedResource Include="Resources\internal.fr.resx" />
+    <EmbeddedResource Include="Resources\internal.hu.resx" />
     <EmbeddedResource Include="Resources\internal.pt-PT.resx" />
     <EmbeddedResource Include="Resources\internal.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>internal.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\internal.ru.resx" />
+    <EmbeddedResource Include="Resources\internal.uk.resx" />
+    <EmbeddedResource Include="Resources\internal.zh-Hans.resx" />
+    <EmbeddedResource Include="Selector.be.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Selector.cs.resx">
       <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Selector.de.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selector.fa-IR.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selector.fr.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selector.hu.resx">
       <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Selector.pt-PT.resx">
@@ -199,6 +295,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Selector.ru.resx">
       <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selector.uk.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selector.zh-Hans.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest">
       <SubType>Designer</SubType>

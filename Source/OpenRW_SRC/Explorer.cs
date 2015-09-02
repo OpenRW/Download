@@ -650,6 +650,11 @@ namespace OpenRW_SRC
         {
             
         }
+
+        private void translateOpenRWToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://openrw.oneskyapp.com/collaboration/");
+        }
     }
 
 

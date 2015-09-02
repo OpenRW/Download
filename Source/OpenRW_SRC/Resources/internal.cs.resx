@@ -151,10 +151,10 @@
     <value />
   </data>
   <data name="noFiDES" xml:space="preserve">
-    <value>nenalezen</value>
+    <value> nenalezen</value>
   </data>
   <data name="noFiTXT" xml:space="preserve">
-    <value>Zvolená složka neobsahuje soubor</value>
+    <value>Zvolená složka neobsahuje soubor </value>
   </data>
   <data name="noFoDES" xml:space="preserve">
     <value>Složka nenalezena</value>

@@ -156,8 +156,8 @@ namespace OpenRW_SRC
         {
             //SEE DETAILED INFORMATION ABOUT THE .IMG AND .DIR FORMAT AT http://www.gtamodding.com/wiki/IMG_archive 
 
-            if(File.Exists(path1))
-            {
+           if(File.Exists(path1))
+           {
 
             
             //Read .DIR file to HEX
@@ -180,11 +180,12 @@ namespace OpenRW_SRC
                     break;
                 }
 
+                    
                 numBytesRead += n;
                 numBytesToRead -= n;
 
             }
-            //numBytesToRead = bytes.Length;
+                                //numBytesToRead = bytes.Length;
 
 
 
@@ -226,13 +227,19 @@ namespace OpenRW_SRC
                 item.SubItems.Add(FileTypeReturner(nameList[i]));
                 listView1.Items.Add(item);
             }
-        }
+
+
+
+                openFile.Close();
+           }
             else
             {
                 MessageBox.Show(OpenRW.Resources._internal.ResourceManager.GetString("notFoundTWO"));
                 exit = true;
             }
- }
+           
+
+        }
 
         public void imgReader(int index, Boolean fast)
         {
@@ -280,7 +287,28 @@ namespace OpenRW_SRC
             }
             
         }
+        private void RenameFile(int rIndex, string rNewFile)
+        {
+            if(rNewFile.Length < 24)
+            {
+            FileStream openFile = new FileStream(path1, FileMode.Open, FileAccess.Write);
+                openFile.Seek(rIndex*32,SeekOrigin.Begin);
+                openFile.Seek(8, SeekOrigin.Current);
+                openFile.Write(new byte[24],0,24);
+                openFile.Seek(-24, SeekOrigin.Current);
+                byte[] newName = new byte[24];
+                Encoding enc = Encoding.GetEncoding("us-ascii",
+                                          new EncoderExceptionFallback(),
+                                          new DecoderExceptionFallback());
+                newName = enc.GetBytes(rNewFile);
+                openFile.Write(newName, 0, newName.Length);
+                openFile.Flush();
+                openFile.Close();
 
+                                                    //Encoding.ASCII.
+                //openFile.Write()
+            }
+        }
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -375,6 +403,11 @@ namespace OpenRW_SRC
             {
                 this.Close();
             }
+        }
+
+        private void renameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RenameFile(listView1.SelectedItems[0].Index, "asdf");
         }
     }
 }

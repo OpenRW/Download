@@ -21,9 +21,9 @@ namespace OpenRW_SRC
     {
         public Selector()
         {
-            //Thread.CurrentThread.CurrentCulture = new CultureInfo("cs");
-            
-            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("cs");
+            //Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+
             InitializeComponent();
             
         }

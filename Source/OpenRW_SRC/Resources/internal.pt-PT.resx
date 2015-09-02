@@ -148,13 +148,13 @@
     <value>(.ipl) Ficheiro de posições</value>
   </data>
   <data name="lblATR" xml:space="preserve">
-    <value>###OLHA###PARA###O###SCREENSHOT###</value>
+    <value />
   </data>
   <data name="noFiDES" xml:space="preserve">
-    <value>Não encontrado</value>
+    <value> Não encontrado</value>
   </data>
   <data name="noFiTXT" xml:space="preserve">
-    <value>A Pasta especificada não contem o ficheiro</value>
+    <value>A Pasta especificada não contem o ficheiro </value>
   </data>
   <data name="noFoDES" xml:space="preserve">
     <value>Pasta não encontrada</value>
