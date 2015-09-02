@@ -31,11 +31,6 @@ namespace OpenRW_SRC
                 Thread.CurrentThread.CurrentCulture = new CultureInfo(MyIni.Read("Lang"));
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(MyIni.Read("Lang"));
             }
-            else
-            {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            }
             
 
             InitializeComponent();

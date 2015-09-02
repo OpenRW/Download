@@ -261,6 +261,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Renamer.de.resx">
+      <DependentUpon>Renamer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Renamer.resx">
       <DependentUpon>Renamer.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Selector.zh-Hans.resx">
       <DependentUpon>Selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.de.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>

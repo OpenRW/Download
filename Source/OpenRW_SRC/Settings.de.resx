@@ -117,67 +117,78 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="sizeHeader.Text" xml:space="preserve">
-    <value>Größe</value>
-  </data>
-  <data name="typeHeader.Text" xml:space="preserve">
-    <value>Dateityp:</value>
-  </data>
-  <data name="listView1.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
-        ZwROYW1lAQQBAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
-        AwAAAAdEYXRlaWVuBfz///8oU3lzdGVtLldpbmRvd3MuRm9ybXMuSG9yaXpvbnRhbEFsaWdubWVudAEA
-        AAAHdmFsdWVfXwAIAgAAAAAAAAAGBQAAAAAGBgAAAApmaWxlSGVhZGVyCw==
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
+  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 124</value>
   </data>
-  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Beenden</value>
+  <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 23</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
+  <data name="button7.Text" xml:space="preserve">
+    <value>Übernehmen und neustarten</value>
   </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Datei</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
   </data>
-  <data name="extractToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Exportieren</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Sprache:</value>
   </data>
-  <data name="renameToolStripMenuItem.Text" xml:space="preserve">
-    <value>Umbenennen</value>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>468, 155</value>
   </data>
-  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Sprache</value>
   </data>
-  <data name="editToolStripMenuItem.Text" xml:space="preserve">
-    <value>Bearbeiten</value>
+  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 122</value>
   </data>
-  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 22</value>
+  <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 23</value>
   </data>
-  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>Über</value>
+  <data name="button6.Text" xml:space="preserve">
+    <value>Alle zurücksetzen</value>
   </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Hilfe</value>
+  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
   </data>
-  <data name="extractToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 22</value>
+  <data name="button5.Text" xml:space="preserve">
+    <value>Zurücksetzen</value>
   </data>
-  <data name="extractToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exportieren</value>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
   </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 26</value>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Zurücksetzen</value>
   </data>
-  <data name="folderBrowserDialog1.Description" xml:space="preserve">
-    <value>Bitte wähle einen Ordner, in den die Dateien exportiert werden sollen:</value>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Zurücksetzen</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Zurücksetzen</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Zurücksetzen</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>468, 155</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Pfade</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>476, 181</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>476, 181</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6352,6 +6363,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>OpenRW - IMG Tool - Vice City / III</value>
+    <value>Einstellungen</value>
   </data>
 </root>

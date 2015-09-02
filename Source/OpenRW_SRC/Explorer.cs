@@ -34,7 +34,7 @@ namespace OpenRW_SRC
     public partial class Explorer : Form
     {
         ComponentResourceManager resources = new ComponentResourceManager(typeof(Explorer));
-        int version = 1000005; //version = 1.00 build = 0005
+        int version = 1000006; //version = 1.00 build = 0006
         int intGame = 0; //You should know this one
 
         bool isWorking = false; //Is the Background Worker currently working? No, it isn't! Aaah whatever...

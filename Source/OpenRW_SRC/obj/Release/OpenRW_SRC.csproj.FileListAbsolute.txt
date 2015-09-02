@@ -238,3 +238,6 @@ C:\Users\Felix\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Release\ru\OpenRW
 C:\Users\Felix\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Release\uk\OpenRW.resources.dll
 C:\Users\Felix\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Release\zh-Hans\OpenRW.resources.dll
 C:\Users\Felix\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Release\OpenRW.Renamer.resources
+C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Release\OpenRW.Renamer.resources
+C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Release\OpenRW.Renamer.de.resources
+C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Release\OpenRW.Settings.de.resources
