@@ -25,19 +25,19 @@ namespace OpenRW
             currLang = MyIni.Read("Lang");
             }
 
-            if(currLang == "EN")
+            if(currLang == "en")
             {
                 comboBox1.SelectedIndex = 0;
             }
-            else if (currLang == "DE")
+            else if (currLang == "de")
             {
                 comboBox1.SelectedIndex = 1;
             }
-            else if (currLang == "BE")
+            else if (currLang == "be")
             {
                 comboBox1.SelectedIndex = 8;
             }
-            else if (currLang == "CS")
+            else if (currLang == "cs")
             {
                 comboBox1.SelectedIndex = 2;
             }
@@ -45,11 +45,11 @@ namespace OpenRW
             {
                 comboBox1.SelectedIndex = 6;
             }
-            else if (currLang == "FR")
+            else if (currLang == "fr")
             {
                 comboBox1.SelectedIndex = 3;
             }
-            else if (currLang == "HU")
+            else if (currLang == "hu")
             {
                 comboBox1.SelectedIndex = 4;
             }
@@ -57,11 +57,11 @@ namespace OpenRW
             {
                 comboBox1.SelectedIndex = 5;
             }
-            else if (currLang == "RU")
+            else if (currLang == "ru")
             {
                 comboBox1.SelectedIndex = 9;
             }
-            else if (currLang == "UK")
+            else if (currLang == "uk")
             {
                 comboBox1.SelectedIndex = 10;
             }
@@ -71,25 +71,45 @@ namespace OpenRW
             }
             //Displays the current language
 
+            if(MyIni.KeyExists("Path0"))
+            { 
+            textBox1.Text = MyIni.Read("Path0");
+            }
+            else if (MyIni.KeyExists("Path10"))
+            {
+                textBox2.Text = MyIni.Read("Path10");
+            }
+            else if (MyIni.KeyExists("Path1"))
+            {
+                textBox3.Text = MyIni.Read("Path1");
+            }
+            else if (MyIni.KeyExists("Path11"))
+            {
+                textBox4.Text = MyIni.Read("Path11");
+            }
+            else if (MyIni.KeyExists("Path2"))
+            {
+                textBox5.Text = MyIni.Read("Path2");
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
             {
-                MyIni.Write("Lang", "EN");
+                MyIni.Write("Lang", "en");
             }
             else if (comboBox1.SelectedIndex == 1)
             {
-                MyIni.Write("Lang", "DE");
+                MyIni.Write("Lang", "de");
             }
             else if (comboBox1.SelectedIndex == 8)
             {
-                MyIni.Write("Lang", "BE");
+                MyIni.Write("Lang", "be");
             }
             else if (comboBox1.SelectedIndex == 2)
             {
-                MyIni.Write("Lang", "CS");
+                MyIni.Write("Lang", "cs");
             }
             else if (comboBox1.SelectedIndex == 6)
             {
@@ -97,11 +117,11 @@ namespace OpenRW
             }
             else if (comboBox1.SelectedIndex == 3)
             {
-                MyIni.Write("Lang", "FR");
+                MyIni.Write("Lang", "fr");
             }
             else if (comboBox1.SelectedIndex == 4)
             {
-                MyIni.Write("Lang", "HU");
+                MyIni.Write("Lang", "hu");
             }
             else if (comboBox1.SelectedIndex == 5)
             {
@@ -109,17 +129,62 @@ namespace OpenRW
             }
             else if (comboBox1.SelectedIndex == 9)
             {
-                MyIni.Write("Lang", "RU");
+                MyIni.Write("Lang", "ru");
             }
             else if (comboBox1.SelectedIndex == 10)
             {
-                MyIni.Write("Lang", "UK");
+                MyIni.Write("Lang", "uk");
             }
             else if (comboBox1.SelectedIndex == 7)
             {
                 MyIni.Write("Lang", "zh-Hans");
             }
              
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MyIni.DeleteKey("Path0");
+            Application.Restart();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MyIni.DeleteKey("Path10");
+            Application.Restart();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MyIni.DeleteKey("Path1");
+            Application.Restart();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MyIni.DeleteKey("Path11");
+            Application.Restart();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MyIni.DeleteKey("Path2");
+            Application.Restart();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MyIni.DeleteKey("Path0");
+            MyIni.DeleteKey("Path10");
+            MyIni.DeleteKey("Path1");
+            MyIni.DeleteKey("Path11");
+            MyIni.DeleteKey("Path2");
+            Application.Restart();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 

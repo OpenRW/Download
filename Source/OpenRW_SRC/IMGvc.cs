@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 namespace OpenRW_SRC
 {
     public partial class IMGvc : Form
@@ -407,7 +408,14 @@ namespace OpenRW_SRC
 
         private void renameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RenameFile(listView1.SelectedItems[0].Index, "asdf");
+            var openForm = new OpenRW.Renamer();
+            var result = openForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string val = openForm.ReturnNewName;            //values preserved after close
+                RenameFile(listView1.SelectedItems[0].Index, val);
+            }
+            
         }
     }
 }

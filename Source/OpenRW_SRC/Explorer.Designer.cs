@@ -68,6 +68,8 @@ namespace OpenRW_SRC
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.viewInTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInHexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.getTheSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -275,9 +277,11 @@ namespace OpenRW_SRC
             this.selectAllToolStripMenuItem,
             this.toolStripMenuItem1,
             this.viewInTextToolStripMenuItem,
-            this.viewInHexToolStripMenuItem});
-            resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
+            this.viewInHexToolStripMenuItem,
+            this.toolStripMenuItem7,
+            this.settingsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             // 
             // searchToolStripMenuItem
             // 
@@ -308,6 +312,17 @@ namespace OpenRW_SRC
             // 
             resources.ApplyResources(this.viewInHexToolStripMenuItem, "viewInHexToolStripMenuItem");
             this.viewInHexToolStripMenuItem.Name = "viewInHexToolStripMenuItem";
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -451,6 +466,8 @@ namespace OpenRW_SRC
         private System.Windows.Forms.ToolStripMenuItem viewInTextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewInHexToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }
 

@@ -94,6 +94,12 @@
     <Compile Include="Path.Designer.cs">
       <DependentUpon>Path.cs</DependentUpon>
     </Compile>
+    <Compile Include="Renamer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renamer.Designer.cs">
+      <DependentUpon>Renamer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\internal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -255,6 +261,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Renamer.resx">
+      <DependentUpon>Renamer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\internal.be.resx" />
     <EmbeddedResource Include="Resources\internal.cs.resx" />
     <EmbeddedResource Include="Resources\internal.de.resx" />
