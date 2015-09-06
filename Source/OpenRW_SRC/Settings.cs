@@ -186,6 +186,7 @@ namespace OpenRW
         {
             Application.Restart();
         }
+
     }
 
     class IniFile  //Written by Danny Beckett

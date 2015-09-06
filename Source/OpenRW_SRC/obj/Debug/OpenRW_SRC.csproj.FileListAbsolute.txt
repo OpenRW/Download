@@ -115,3 +115,6 @@ C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Debug\fr\OpenRW.r
 C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Debug\hu\OpenRW.resources.dll
 C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Debug\uk\OpenRW.resources.dll
 C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Debug\zh-Hans\OpenRW.resources.dll
+C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Debug\OpenRW.Renamer.resources
+C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Debug\OpenRW.Renamer.de.resources
+C:\Users\redit\Documents\GitHub\Download\Source\OpenRW_SRC\obj\Debug\OpenRW.Settings.de.resources
