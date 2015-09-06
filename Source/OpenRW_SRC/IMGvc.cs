@@ -417,6 +417,50 @@ namespace OpenRW_SRC
             }
             
         }
+
+        private void renameToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var openForm = new OpenRW.Renamer();
+            var result = openForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string val = openForm.ReturnNewName;            //values preserved after close
+                RenameFile(listView1.SelectedItems[0].Index, val);
+            }
+        }
+
+        private void rebuildToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int ctr = 0;
+		foreach (int element in offsetList)
+		{
+		if(ctr!=0)
+        { 
+		    if((offsetList[ctr] - (sizeList[ctr -1]  + offsetList[ctr-1])) > 0)
+		    {
+                FileStream openFile = new FileStream(path2, FileMode.Open, FileAccess.ReadWrite);
+                openFile.Seek(offsetList[ctr], SeekOrigin.Begin);
+                byte[] myBytes = new Byte[(offsetList[offsetList.Count - 1] + sizeList[sizeList.Count - 1]) - (offsetList[ctr])];
+                openFile.Read(myBytes,0, (offsetList[offsetList.Count - 1] + sizeList[sizeList.Count - 1]) - (offsetList[ctr]));
+                openFile.Seek(-(offsetList[ctr] - (sizeList[ctr - 1] + offsetList[ctr - 1])), SeekOrigin.Current);
+                openFile.SetLength(openFile.Length - (offsetList[ctr] - (sizeList[ctr - 1] + offsetList[ctr - 1])));
+                openFile.Write(myBytes, 0, myBytes.Length);
+                //Result: IMG is cleaned up, but changes have not been written to the .DIR files yet.
+                //DO NOT TRY TO BUILD THIS CODE. IT WILL CRASH YOUR IMG FILES!
+		        //The offsets of all bits, that were moved need to get edited in the DIR files.
+		    }
+		    else
+		    {
+			    //kein Platz
+		    }
+            
+            MessageBox.Show("Läuft");
+        }
+		ctr++;
+
+		}
+
+        }
     }
 }
 
