@@ -48,6 +48,7 @@ namespace OpenRW_SRC
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extractToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.renameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rebuildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -55,7 +56,7 @@ namespace OpenRW_SRC
             this.renameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.rebuildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showOffsetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -142,6 +143,12 @@ namespace OpenRW_SRC
             resources.ApplyResources(this.renameToolStripMenuItem, "renameToolStripMenuItem");
             this.renameToolStripMenuItem.Click += new System.EventHandler(this.renameToolStripMenuItem_Click);
             // 
+            // rebuildToolStripMenuItem
+            // 
+            this.rebuildToolStripMenuItem.Name = "rebuildToolStripMenuItem";
+            resources.ApplyResources(this.rebuildToolStripMenuItem, "rebuildToolStripMenuItem");
+            this.rebuildToolStripMenuItem.Click += new System.EventHandler(this.rebuildToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -159,7 +166,8 @@ namespace OpenRW_SRC
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.extractToolStripMenuItem,
-            this.renameToolStripMenuItem1});
+            this.renameToolStripMenuItem1,
+            this.showOffsetToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
@@ -180,11 +188,11 @@ namespace OpenRW_SRC
             resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer;
             // 
-            // rebuildToolStripMenuItem
+            // showOffsetToolStripMenuItem
             // 
-            this.rebuildToolStripMenuItem.Name = "rebuildToolStripMenuItem";
-            resources.ApplyResources(this.rebuildToolStripMenuItem, "rebuildToolStripMenuItem");
-            this.rebuildToolStripMenuItem.Click += new System.EventHandler(this.rebuildToolStripMenuItem_Click);
+            this.showOffsetToolStripMenuItem.Name = "showOffsetToolStripMenuItem";
+            resources.ApplyResources(this.showOffsetToolStripMenuItem, "showOffsetToolStripMenuItem");
+            this.showOffsetToolStripMenuItem.Click += new System.EventHandler(this.showOffsetToolStripMenuItem_Click);
             // 
             // IMGvc
             // 
@@ -222,5 +230,6 @@ namespace OpenRW_SRC
         private System.Windows.Forms.ToolStripMenuItem renameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem renameToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem rebuildToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showOffsetToolStripMenuItem;
     }
 }

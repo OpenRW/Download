@@ -445,6 +445,10 @@ namespace OpenRW_SRC
                 openFile.Seek(-(offsetList[ctr] - (sizeList[ctr - 1] + offsetList[ctr - 1])), SeekOrigin.Current);
                 openFile.SetLength(openFile.Length - (offsetList[ctr] - (sizeList[ctr - 1] + offsetList[ctr - 1])));
                 openFile.Write(myBytes, 0, myBytes.Length);
+                openFile.Flush();
+                openFile.Close();
+                
+                
                 //Result: IMG is cleaned up, but changes have not been written to the .DIR files yet.
                 //DO NOT TRY TO BUILD THIS CODE. IT WILL CRASH YOUR IMG FILES!
 		        //The offsets of all bits, that were moved need to get edited in the DIR files.
@@ -454,12 +458,17 @@ namespace OpenRW_SRC
 			    //kein Platz
 		    }
             
-            MessageBox.Show("Läuft");
+            //MessageBox.Show("Läuft");
         }
 		ctr++;
 
 		}
 
+        }
+
+        private void showOffsetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(offsetList[listView1.SelectedItems[0].Index].ToString());
         }
     }
 }
