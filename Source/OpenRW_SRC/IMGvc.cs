@@ -448,7 +448,10 @@ namespace OpenRW_SRC
                 openFile.Flush();
                 openFile.Close();
                 
-                
+                foreach(int offset in offsetList)
+                {
+
+                }
                 //Result: IMG is cleaned up, but changes have not been written to the .DIR files yet.
                 //DO NOT TRY TO BUILD THIS CODE. IT WILL CRASH YOUR IMG FILES!
 		        //The offsets of all bits, that were moved need to get edited in the DIR files.
@@ -463,6 +466,7 @@ namespace OpenRW_SRC
 		ctr++;
 
 		}
+            
 
         }
 
