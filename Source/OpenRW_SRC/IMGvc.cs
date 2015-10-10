@@ -12,7 +12,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 namespace OpenRW_SRC
 {
     public partial class IMGvc : Form
@@ -155,9 +154,10 @@ namespace OpenRW_SRC
 
         public void dirReader()
         {
+            
             //SEE DETAILED INFORMATION ABOUT THE .IMG AND .DIR FORMAT AT http://www.gtamodding.com/wiki/IMG_archive 
 
-           if(File.Exists(path1))
+            if (File.Exists(path1))
            {
 
             
@@ -220,6 +220,7 @@ namespace OpenRW_SRC
                 pointer += 24;
 
             }
+                
             for (int i = 0; i < nameList.Count; i++)
             {
                 ListViewItem item = new ListViewItem(i.ToString(), 0, listView1.Groups[0]);
@@ -305,7 +306,7 @@ namespace OpenRW_SRC
                 openFile.Write(newName, 0, newName.Length);
                 openFile.Flush();
                 openFile.Close();
-
+                nameList[rIndex]=rNewFile;
                                                     //Encoding.ASCII.
                 //openFile.Write()
             }
@@ -408,7 +409,7 @@ namespace OpenRW_SRC
 
         private void renameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var openForm = new OpenRW.Renamer();
+            var openForm = new OpenRW.Renamer(listView1.SelectedItems[0].SubItems[1].Text);
             var result = openForm.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -420,7 +421,7 @@ namespace OpenRW_SRC
 
         private void renameToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            var openForm = new OpenRW.Renamer();
+            var openForm = new OpenRW.Renamer(listView1.SelectedItems[0].SubItems[1].Text);
             var result = openForm.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -431,44 +432,164 @@ namespace OpenRW_SRC
 
         private void rebuildToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int ctr = 0;
-		foreach (int element in offsetList)
-		{
-		if(ctr!=0)
-        { 
-		    if((offsetList[ctr] - (sizeList[ctr -1]  + offsetList[ctr-1])) > 0)
-		    {
+            if (offsetList.Count == 0)
+            {
+                return;
+            }
+            if(offsetList[0] != 0)
+            {
                 FileStream openFile = new FileStream(path2, FileMode.Open, FileAccess.ReadWrite);
-                openFile.Seek(offsetList[ctr], SeekOrigin.Begin);
-                byte[] myBytes = new Byte[(offsetList[offsetList.Count - 1] + sizeList[sizeList.Count - 1]) - (offsetList[ctr])];
-                openFile.Read(myBytes,0, (offsetList[offsetList.Count - 1] + sizeList[sizeList.Count - 1]) - (offsetList[ctr]));
-                openFile.Seek(-(offsetList[ctr] - (sizeList[ctr - 1] + offsetList[ctr - 1])), SeekOrigin.Current);
-                openFile.SetLength(openFile.Length - (offsetList[ctr] - (sizeList[ctr - 1] + offsetList[ctr - 1])));
+                openFile.Seek(offsetList[0]*2048, SeekOrigin.Begin);
+                byte[] myBytes = new Byte[sizeList[0]*2048];
+                openFile.Read(myBytes, 0, sizeList[0]*2048);
+                openFile.Seek(0, SeekOrigin.Begin);
+                //openFile.SetLength(openFile.Length - (offsetList[ctr] - (sizeList[ctr - 1] + offsetList[ctr - 1])));
                 openFile.Write(myBytes, 0, myBytes.Length);
                 openFile.Flush();
                 openFile.Close();
+                offsetList[0] = 0;
+            }
+            for (int ctr = 0;ctr<offsetList.Count;ctr++)
+            {
+                if (ctr != 0)
+                {
+                    if ((offsetList[ctr] * 2048 - (sizeList[ctr - 1] * 2048 + offsetList[ctr - 1] * 2048)) > 0)
+                    {
+                        FileStream openFile = new FileStream(path2, FileMode.Open, FileAccess.ReadWrite);
+                        openFile.Seek(offsetList[ctr] * 2048, SeekOrigin.Begin);
+                        byte[] myBytes = new Byte[sizeList[ctr] * 2048]; //(offsetList[offsetList.Count - 1]*2048 + sizeList[sizeList.Count - 1]*2048) - (offsetList[ctr]*2048)
+                        openFile.Read(myBytes, 0, myBytes.Length);
+                        openFile.Seek(offsetList[ctr - 1] * 2048 + sizeList[ctr - 1] * 2048, SeekOrigin.Begin);
+                        openFile.Write(myBytes, 0, myBytes.Length);
+                        openFile.Flush();
+                        openFile.Close();
+                        offsetList[ctr] = offsetList[ctr - 1] + sizeList[ctr - 1];
+
+
+                        //Result: IMG is cleaned up, but changes have not been written to the .DIR files yet.
+                        //DO NOT TRY TO BUILD THIS CODE. IT WILL CRASH YOUR IMG FILES!
+                        //The offsets of all bits, that were moved need to get edited in the DIR files.
+                    }
+                    else
+                    {
+                        //kein Platz
+                    }
+
+                    //MessageBox.Show("Läuft");
+                }
                 
                 
-                //Result: IMG is cleaned up, but changes have not been written to the .DIR files yet.
-                //DO NOT TRY TO BUILD THIS CODE. IT WILL CRASH YOUR IMG FILES!
-		        //The offsets of all bits, that were moved need to get edited in the DIR files.
-		    }
-		    else
-		    {
-			    //kein Platz
-		    }
-            
-            //MessageBox.Show("Läuft");
-        }
-		ctr++;
-
-		}
-
+            }
+            FileStream shortFile = new FileStream(path2, FileMode.Open, FileAccess.ReadWrite);
+            shortFile.SetLength(offsetList[offsetList.Count - 1]*2048 + sizeList[offsetList.Count - 1]*2048);
+            int counter = 0;
+            FileStream dirFile = new FileStream(path1, FileMode.Open, FileAccess.Write);
+            dirFile.SetLength(32 * offsetList.Count);
+            foreach (int currOff in offsetList)
+            {
+                
+                BinaryWriter binWriter = new BinaryWriter(dirFile);
+                binWriter.Write(Convert.ToInt32(currOff));
+                binWriter.Write(Convert.ToInt32(sizeList[counter]));
+                byte[] myBytes = new Byte[24];
+                Encoding enc = Encoding.GetEncoding("us-ascii", new EncoderExceptionFallback(), new DecoderExceptionFallback());
+                Buffer.BlockCopy(enc.GetBytes(nameList[counter]), 0, myBytes, 0, nameList[counter].Length);
+                
+                
+                
+                binWriter.Write(myBytes);
+                counter++;
+            }
+            dirFile.Flush();
+            dirFile.Close();
         }
 
         private void showOffsetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(offsetList[listView1.SelectedItems[0].Index].ToString());
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            nameList.Clear();
+            offsetList.Clear();
+            sizeList.Clear();
+            dirReader();
+        }
+
+        private void rebuildButton_Click(object sender, EventArgs e)
+        {
+            if (offsetList.Count == 0)
+            {
+                return;
+            }
+            if (offsetList[0] != 0)
+            {
+                FileStream openFile = new FileStream(path2, FileMode.Open, FileAccess.ReadWrite);
+                openFile.Seek(offsetList[0] * 2048, SeekOrigin.Begin);
+                byte[] myBytes = new Byte[sizeList[0] * 2048];
+                openFile.Read(myBytes, 0, sizeList[0] * 2048);
+                openFile.Seek(0, SeekOrigin.Begin);
+                //openFile.SetLength(openFile.Length - (offsetList[ctr] - (sizeList[ctr - 1] + offsetList[ctr - 1])));
+                openFile.Write(myBytes, 0, myBytes.Length);
+                openFile.Flush();
+                openFile.Close();
+                offsetList[0] = 0;
+            }
+            for (int ctr = 0; ctr < offsetList.Count; ctr++)
+            {
+                if (ctr != 0)
+                {
+                    if ((offsetList[ctr] * 2048 - (sizeList[ctr - 1] * 2048 + offsetList[ctr - 1] * 2048)) > 0)
+                    {
+                        FileStream openFile = new FileStream(path2, FileMode.Open, FileAccess.ReadWrite);
+                        openFile.Seek(offsetList[ctr] * 2048, SeekOrigin.Begin);
+                        byte[] myBytes = new Byte[sizeList[ctr] * 2048]; //(offsetList[offsetList.Count - 1]*2048 + sizeList[sizeList.Count - 1]*2048) - (offsetList[ctr]*2048)
+                        openFile.Read(myBytes, 0, myBytes.Length);
+                        openFile.Seek(offsetList[ctr - 1] * 2048 + sizeList[ctr - 1] * 2048, SeekOrigin.Begin);
+                        openFile.Write(myBytes, 0, myBytes.Length);
+                        openFile.Flush();
+                        openFile.Close();
+                        offsetList[ctr] = offsetList[ctr - 1] + sizeList[ctr - 1];
+
+
+                        //Result: IMG is cleaned up, but changes have not been written to the .DIR files yet.
+                        //DO NOT TRY TO BUILD THIS CODE. IT WILL CRASH YOUR IMG FILES!
+                        //The offsets of all bits, that were moved need to get edited in the DIR files.
+                    }
+                    else
+                    {
+                        //kein Platz
+                    }
+
+                    //MessageBox.Show("Läuft");
+                }
+
+
+            }
+            FileStream shortFile = new FileStream(path2, FileMode.Open, FileAccess.ReadWrite);
+            shortFile.SetLength(offsetList[offsetList.Count - 1] * 2048 + sizeList[offsetList.Count - 1] * 2048);
+            int counter = 0;
+            FileStream dirFile = new FileStream(path1, FileMode.Open, FileAccess.Write);
+            dirFile.SetLength(32 * offsetList.Count);
+            foreach (int currOff in offsetList)
+            {
+
+                BinaryWriter binWriter = new BinaryWriter(dirFile);
+                binWriter.Write(Convert.ToInt32(currOff));
+                binWriter.Write(Convert.ToInt32(sizeList[counter]));
+                byte[] myBytes = new Byte[24];
+                Encoding enc = Encoding.GetEncoding("us-ascii", new EncoderExceptionFallback(), new DecoderExceptionFallback());
+                Buffer.BlockCopy(enc.GetBytes(nameList[counter]), 0, myBytes, 0, nameList[counter].Length);
+
+
+
+                binWriter.Write(myBytes);
+                counter++;
+            }
+            dirFile.Flush();
+            dirFile.Close();
         }
     }
 }

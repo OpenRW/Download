@@ -12,9 +12,10 @@ namespace OpenRW
 {
     public partial class Renamer : Form
     {
-        public Renamer()
+        public Renamer(string oldFileName)
         {
             InitializeComponent();
+            textBox1.Text = oldFileName;
 
 
         }
